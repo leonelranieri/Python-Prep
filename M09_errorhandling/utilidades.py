@@ -16,6 +16,15 @@ class Utilidades:
                 print("El número ", str(i), " ES primo")
             else:
                 print("El número ", str(i), " NO ES primo")
+    
+    def es_primo_con_lista(self):
+        lista_p=[]
+        for i in self.lista:
+            if(self.__es_primo(i)):
+                lista_p.append(True)
+            else:
+                lista_p.append(False)
+        return lista_p
 
     def __es_primo(self, num):
         '''Función que determina si un número es primo o no.
@@ -111,6 +120,12 @@ class Utilidades:
         conj=set(self.lista)
         for i in conj:
             print("El factorial de ", i, " es ", self.__factorial(i))
+
+    def factorial_con_lista(self):
+        lista_fact=[]
+        for i in self.lista:
+            lista_fact.append(self.__factorial(i))
+        return lista_fact
 
     def __factorial(self, num):
         '''Calcula el factorial de un número natural'''
