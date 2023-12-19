@@ -19,6 +19,26 @@ class PruebaHenryChallenge(unittest.TestCase):
       valor_esperado = None
       self.assertEqual(valor_test, valor_esperado)
 
+    def test_Factorial_04(self):
+      valor_test = ch.Factorial("5")
+      valor_esperado = 120
+      self.assertEqual(valor_test, valor_esperado)
+
+    def test_Factorial_05(self):
+      valor_test = ch.Factorial(5.3)
+      valor_esperado = 120
+      self.assertEqual(valor_test, valor_esperado)
+
+    def test_Factorial_06(self):
+      valor_test = ch.Factorial("5.3")
+      valor_esperado = None
+      self.assertEqual(valor_test, valor_esperado)
+    
+    def test_Factorial_07(self):
+      valor_test = ch.Factorial([1,2,3])
+      valor_esperado = None
+      self.assertEqual(valor_test, valor_esperado)
+
     def test_EsPrimo_01(self):
       valor_test = ch.EsPrimo(5)
       valor_esperado = True
@@ -31,6 +51,16 @@ class PruebaHenryChallenge(unittest.TestCase):
 
     def test_EsPrimo_03(self):
       valor_test = ch.EsPrimo('parametro incorrecto')
+      valor_esperado = None
+      self.assertEqual(valor_test, valor_esperado)
+
+    def test_EsPrimo_04(self):
+      valor_test = ch.EsPrimo('11')
+      valor_esperado = True
+      self.assertEqual(valor_test, valor_esperado)
+
+    def test_EsPrimo_05(self):
+      valor_test = ch.EsPrimo('2.5')
       valor_esperado = None
       self.assertEqual(valor_test, valor_esperado)
 
@@ -54,7 +84,7 @@ class PruebaHenryChallenge(unittest.TestCase):
       for i in range(0,100):
         valor_test = a.CumplirAnios()
       valor_esperado = 100
-      self.assertEqual(valor_test, valor_esperado)
+      self.assertEqual(valor_test, valor_esperado) 
 
 resultado_test = unittest.main(argv=[''], verbosity=2, exit=False)
 
